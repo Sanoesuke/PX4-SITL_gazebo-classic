@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='iris_hitl_hbv_1615'>
+    <include>
+      <uri>model://iris_hitl</uri>
+    </include>
+    <include>
+      <uri>model://hbv_1615</uri>
+      <pose>0 0 -0.0425 0 1.57 0</pose>
+    </include>
+    <joint name="iris_hitl::hbv_1615_joint" type="revolute">
+      <parent>iris_hitl::base_link</parent>
+      <child>hbv_1615::link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+  </model>
+</sdf>
